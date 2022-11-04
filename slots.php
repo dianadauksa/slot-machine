@@ -3,9 +3,8 @@
 $boardRows = 3;
 $boardCols = 5;
 $costPerSpin = 2;
-$symbols = ['A', 'K', 'Q', 'J', '7'];
-$prizes = ['A' => 10, 'K' => 5, 'Q' => 4, 'J' => 3, '7' => 2];
-//echo $prizes['A']; - to get 10 e.g.
+$symbols = ['$', '#', '%', '*', '7'];
+$prizes = ['$' => 10, '#' => 5, '%' => 4, '*' => 3, '7' => 2];
 
 $winningCombos = [
     //horizontal
