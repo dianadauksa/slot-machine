@@ -27,7 +27,7 @@ class Spin
         return $this->wallet;
     }
 
-    public function greet(): void
+    public function intro(): void
     {
         echo "SLOT MACHINE ($" . COST_PER_SPIN . " per spin)" . PHP_EOL;
     }
@@ -54,7 +54,6 @@ class Spin
         if ($this->getWallet()->getMoney() > 0) {
             echo "Handing out $" . $this->getWallet()->getMoney() . PHP_EOL;
             echo "Bye" . PHP_EOL;
-            $this->getWallet()->subtractMoney($this->getWallet()->getMoney());
         }
     }
 

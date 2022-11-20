@@ -6,8 +6,9 @@ require_once 'app/constants.php';
 use App\{Slots, Spin, Wallet};
 use const App\{ROWS, COLUMNS, COST_PER_SPIN, SYMBOLS, WINNING_COMBOS};
 
-$spin = new Spin(new Slots(ROWS, COLUMNS, SYMBOLS, WINNING_COMBOS));
-$spin->greet();
+$slots = new Slots(ROWS, COLUMNS, SYMBOLS, WINNING_COMBOS);
+$spin = new Spin($slots);
+$spin->intro();
 $spin->setWallet(new Wallet());
 if (!$spin->inputMoney()) {
     $spin->handOutMoney();
