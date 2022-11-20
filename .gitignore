@@ -1,6 +1,4 @@
 
-.idea/modules.xml
-.idea/php.xml
-.idea/slot-machine.iml
-.idea/vcs.xml
-.idea/workspace.xml
+.idea/
+vendor/
+.DS_Store
