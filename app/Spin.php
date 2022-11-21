@@ -57,7 +57,7 @@ class Spin
         }
     }
 
-    public function askConfirmation(string $message): bool
+    public function selection(string $message): bool
     {
         $choice = strtoupper(readline("$message ('ENTER'/'N'): "));
         return ($choice === "" || $choice === "ENTER");

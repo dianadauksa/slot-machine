@@ -17,7 +17,7 @@ if (!$spin->inputMoney()) {
 while (true) {
     do {
         $spin->showWallet();
-        if (!$spin->askConfirmation("Spin for $" . COST_PER_SPIN . "?")) {
+        if (!$spin->selection("Spin for $" . COST_PER_SPIN . "?")) {
             $spin->handOutMoney();
             exit;
         }
@@ -28,7 +28,7 @@ while (true) {
     } while ($spin->getWallet()->getMoney() >= COST_PER_SPIN);
 
     $spin->showWallet();
-    if (!$spin->askConfirmation("Insert more $$$?") || !$spin->inputMoney()) {
+    if (!$spin->selection("Insert more $$$?") || !$spin->inputMoney()) {
         $spin->handOutMoney();
         exit;
     }
