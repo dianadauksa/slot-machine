@@ -29,13 +29,13 @@ class Spin
 
     public function intro(): void
     {
-        echo "SLOT MACHINE ($" . COST_PER_SPIN . " per spin)" . PHP_EOL;
+        echo "🎰 SLOT MACHINE ($" . COST_PER_SPIN . " per spin) 🎰" . PHP_EOL;
     }
 
     public function inputMoney(): bool
     {
         do {
-            $input = strtoupper(readline("Insert money or press 'N' to exit: "));
+            $input = strtoupper(readline("Insert money 🪙 or press 'N' to exit: "));
             if ($input === "N") {
                 return false;
             }
@@ -53,6 +53,7 @@ class Spin
     {
         if ($this->getWallet()->getMoney() > 0) {
             echo "Handing out $" . $this->getWallet()->getMoney() . PHP_EOL;
+            echo str_repeat("🪙", $this->getWallet()->getMoney()) . PHP_EOL;
             echo "Bye" . PHP_EOL;
         }
     }
@@ -81,7 +82,7 @@ class Spin
     {
         foreach ($this->getSlots()->calculateWins() as $win) {
             $this->getWallet()->addMoney($win['value']);
-            echo "YOU WIN! A line of '" . $win['symbol'] . "' is worth $" . $win['value'] . PHP_EOL;
+            echo "🏆 YOU WIN! A line of '" . $win['symbol'] . "' is worth $" . $win['value'] . PHP_EOL;
         }
     }
 }
